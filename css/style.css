@@ -1,0 +1,360 @@
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+body {
+    background-image: url(images/896979.webp);
+    /* background-image: url(/clouds-twilight-times_74190-1268.avif); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.backround-filter {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0c064261;
+}
+
+.wather-box {
+    width: 450px;
+    height: 75px;
+    background: white;
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    padding: 15px;
+    transition: all .3s;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.wather-box-active {
+    height: 500px;
+}
+
+.search-box {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-box input {
+    border-radius: 8px;
+    border: 1px solid #87909f;
+    padding: 10px;
+    outline: none;
+    transition: all .3s;
+    width: 80%;
+    text-transform: capitalize;
+    font-size: large;
+}
+
+.search-box input:focus {
+    box-shadow: 0px 0px 5px 0px #6457e7c4;
+    border: 1px solid #6357e775;
+}
+
+.search {
+    height: 45px;
+    outline: none;
+    width: 45px;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 20px;
+    background: #efcbd17d;
+    color: #384e76 !important;
+    cursor: pointer;
+    transition: all .2s ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search i {
+    color: #384e76 !important;
+}
+
+.search:hover {
+    background: #7a7de57d;
+    color: #5d3689;
+}
+
+.search:active {
+    transform: scale(0.9);
+}
+
+form {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center
+}
+
+.wather-condition {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    height: 100%;
+    justify-content: space-between;
+    transition: all .3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.wather-condition-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.condition-img {
+    background-image: url(images/suny.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+}
+
+.wather-info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+
+.wind,
+.temp {
+    display: flex;
+    align-items: center;
+    padding: auto;
+}
+
+.wind span:nth-child(2) {
+    padding-left: 15px;
+}
+
+.temp span:nth-child(2) {
+    padding-right: 15px;
+}
+
+.info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+
+}
+
+.city-name {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.city-name i {
+    font-size: 30px;
+}
+
+.fa-solid {
+    color: #00186e;
+}
+
+.active {
+    transition: all .3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.hidden {
+    transition: all .3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.not-found {
+    transition: all .3s;
+    opacity: 0;
+    visibility: hidden;
+    max-width: 100%;
+    font-size: inherit;
+    text-align: center;
+}
+
+.not-found-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+svg {
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    transition: all .3s;
+}
+
+@media screen and (max-width:320px) {
+    .wather-box-active {
+        height: 400px !important;
+    }
+
+    .search-box input {
+        height: 40px;
+    }
+
+    .condition-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .wather-condition {
+        margin-top: 20px;
+    }
+
+    .info {
+        padding: 0 5px;
+        font-size: x-small !important;
+    }
+
+    .city-name i {
+        padding: 0;
+        font-size: 20px;
+    }
+
+    .wather-info {
+        padding: 0 5px;
+        font-size: smaller;
+    }
+
+    .search-box input {
+        font-size: small;
+    }
+
+    .search {
+        height: 35px;
+        width: 35px;
+    }
+
+    .wather-box {
+        height: 70px;
+        width: 250px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .wather-box {
+        /* width: 370px */
+    }
+
+    .info {
+        padding: 0 10px;
+    }
+
+    .info {
+        padding: 0 10px;
+        font-size: smaller;
+    }
+
+    .wather-info {
+        padding: 0 5px;
+        font-size: small;
+    }
+}
+
+@media screen and (min-width:420px) and (max-width:500px) {
+    .wather-box {
+        width: 400px
+    }
+}
+
+@media screen and (min-width:380px) and (max-width:420px) {
+    .wather-box {
+        width: 350px
+    }
+}
+
+@media screen and (min-width:330px) and (max-width:380px) {
+    .wather-box {
+        width: 300px
+    }
+}
+
+@media screen and (min-width:280px) and (max-width:330px) {
+    .wather-box {
+        width: 250px;
+    }
+
+    .input-box {
+        height: 40px;
+    }
+
+    .search {
+        height: 35px;
+        width: 35px;
+    }
+
+    .search-box input {
+        font-size: small;
+    }
+
+    .info {
+        font-size: x-small;
+    }
+}
+
+@media screen and (max-width:270px) {
+    .wather-box {
+        height: 100px;
+        width: 200px
+    }
+
+    form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-box input {
+        width: 100%;
+        height: 30px;
+    }
+
+    .search {
+        height: 30px;
+        width: 100%;
+        border-radius: 7px;
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .wather-info {
+        font-size: x-small;
+    }
+
+    .wather-box-active {
+        height: 340px !important;
+    }
+}
